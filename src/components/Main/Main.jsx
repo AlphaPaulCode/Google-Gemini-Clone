@@ -14,6 +14,7 @@ export const Main = () => {
     <p><span>Hello, Paul</span></p>
     <p>How can I help you today?</p>
     </div>
+    
     <div className='cards'>
     <div className='card'>
     <p>Suggest Beautiful places to see an upcoming road trip</p>
