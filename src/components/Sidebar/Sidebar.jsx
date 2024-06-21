@@ -26,6 +26,7 @@ const Sidebar = () => {
               <p>{item}...</p>
               </div>
             )
+            
         })}
         
         </div>
