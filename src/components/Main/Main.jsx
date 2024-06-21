@@ -15,8 +15,9 @@ export const Main = () => {
     </div>
     <div className='main-container'>
 
-    {!showResult}
-    <div className='greet'>
+    {!showResult
+      ?<>
+      <div className='greet'>
     <p><span>Hello, Paul</span></p>
     <p>How can I help you today?</p>
     </div>
@@ -39,6 +40,26 @@ export const Main = () => {
     <img src= {assets.code_icon} alt=''/>
     </div>
     </div>
+      </>
+      :<div className='result'>
+        <div className="result-title">
+        <img src={assets.user_icon} alt=""/>
+        <p>{recentPrompt}</p>
+        </div>
+        <div className= "result-data">
+          <img src={assets.gemini_icon} alt="" />
+          {loading
+            ?<div className='loader'>
+            <hr/>
+            <hr/>
+            <hr/>
+            </div>
+            :<p dangerouslySetInnerHTML={{__html:resultData}}></p>
+          }
+        </div>
+      </div>
+    }
+    
 
     <div className='main-bottom'>
     <div className='search-box'>
